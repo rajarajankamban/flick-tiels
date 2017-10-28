@@ -1,0 +1,18 @@
+<div class="grid-container" *ngIf="flickService.$recentpics | async; let photos">
+  <div class='flick-grid'>
+     <div class="col-sm-12 col-xs-12">
+        <nav aria-label="...">
+            <ul class="pager">
+              <li class="previous" *ngIf="(flickService.currentPage>1)" (click)="navigatePage(false)"><a href="javascript:void(0);"><span aria-hidden="true">&larr;</span> Older</a></li>
+              <li class="next"  (click)="navigatePage(true)"><a href="javascript:void(0);">Newer <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+          </nav>
+      </div>
+    <div class='tiels' *ngFor="let photo of photos" (click)="reviewImage(photo)">
+      <img [src]="photo.imageurlN">
+      <div class="rating">
+        <span class="glyphicon glyphicon-star" *ngIf="photo.rating"><span >{{photo.rating}}</span></span>
+      </div>
+    </div>
+  </div>
+</div>

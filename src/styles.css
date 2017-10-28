@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+body { padding-top: 70px; }
+.grid-container{
+    margin: 0 auto;
+    width: 94%;
+}
+
+/* position: relative;
+bottom: 32px;
+height: 32px;
+color: white;
+font-size: 18px;
+background: linear-gradient(0deg, #7d7b7c, gray 10%, transparent); */
